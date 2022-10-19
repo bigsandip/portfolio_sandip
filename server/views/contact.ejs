@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include partials/header.ejs %>
+  </head>
+
+  <body id="page-top">
+    <!-- Navigation-->
+    <% include partials/navbar.ejs %>
+    <br><br>
+    
+    <section id="contact ">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">
+          Contact Me
+        </h2>
+        <hr class="star-dark mb-5" />
+        <div class="row ">
+          <div class="col-lg mx-auto ">
+            <!-- <form
+              name="sentMessage"
+              id="contactForm"
+              action=""
+              method="post"
+            > -->
+            <form action="" method="post">
+              <div class="control-group">
+                <div
+                  class="form-group floting-label-form-group controls mb-0 pb-2"
+                >
+
+
+                <!-- firstname -->
+                  <label for="firstName">First Name:*</label>
+                  <br>
+                  <input
+                    class="form-contol"
+                    id="firstName"
+                    name="firstName"
+                    type="text"
+                    placeholder="First Name"
+                    required="required"
+                  />
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+
+
+              <!-- lastname -->
+
+              <div class="control-group">
+                <div
+                  class="form-group floting-label-form-group controls mb-0 pb-2"
+                >
+                  <label for="firstName">Last Name:*</label>
+                  <br>
+                  <input
+                    class="form-contol"
+                    id="lastName"
+                    name="lastName"
+                    type="text"
+                    placeholder="Last Name"required="required"
+                  />
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+
+              <!-- email -->
+
+              <div class="control-group">
+                <div
+                  class="form-group floting-label-form-group controls mb-0 pb-2"
+                >
+                  <label for="firstName">Email:*</label>
+                  <br>
+                  <input
+                    class="form-contol"
+                    id="email"
+                    name="email"
+                    type="text"
+                    placeholder="Email"required="required"
+                  />
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+
+
+              <!-- phno -->
+
+              <div class="control-group">
+                <div
+                  class="form-group floting-label-form-group controls mb-0 pb-2"
+                >
+                  <label for="firstName">Phone No.:</label>
+                  <br>
+                  <input
+                    class="form-contol"
+                    id="email"
+                    name="number"
+                    type="text"
+                    placeholder="number" 
+                  />
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+                <!-- message -->
+
+              <div class="control-group">
+                <div
+                  class="form-group floting-label-form-group controls mb-0 pb-2"
+                >
+                  <label for="firstName">Message:*</label>
+                  <br>
+              
+                    <textarea class="form-contol"name="" id="" cols="30" rows="10"required="required"></textarea>
+
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <br />
+
+              <div class="form-group">
+               <a href="/home"><button type="submit" class="btn btn-primary" btn-xl btn-block>
+                Send
+              </button></a> 
+              </div>
+            </form>
+          </div>
+          <div class="col-lg mx-auto  ">
+          
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.35406185463!2d-79.24759534920001!3d43.765508679015035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d1b335c70251%3A0xf1b22e6a4b0aa30d!2s3%20Bainhart%20Crescent%2C%20Scarborough%2C%20ON%20M1H%202R1!5e0!3m2!1sen!2sca!4v1664721671668!5m2!1sen!2sca" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+     
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Footer-->
+    <% include partials/footer.ejs %>
+  </body>
+</html>

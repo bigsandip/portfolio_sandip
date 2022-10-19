@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ../partials/header.ejs %>
+  </head>
+<br><br>
+  <body id="page-top">
+    <!--Navigation-->
+    <% include ../partials/navbar.ejs %>
+<!--service Grid Section-->
+<section class="portfolio" id="portfolio">
+   <div class="container"> 
+       <h2 class="text-center text-uppercase text-secondary text-white  mb-0">
+           Edit User
+         </h2>
+         <hr class="star-dark mb-5" />
+         <div class="row">
+
+            <a href="/users/add/" class="btn btn-primary" role="button">
+                <i class="fas fa-plus-circle"></i> Add User</a>
+                <br>
+                <table class="table table-bordered table-striped table-hover">
+                    <!-- Header Row-->
+                    <tr class="d-flex">
+                        <th class="text-center col-2">Full Name</th>
+                        <th class="text-center col-2">Username</th>
+                        <th class="text-center col-3">Date Of Birth</th>
+                        <th class="text-center col-3">Email</th>
+                        
+                        <th class="text-center col-1">Edit</th>
+                        <th class="text-center col-1">Delete</th>
+                    </tr>
+    
+                    <!-- Repeatable Template Row -->
+    
+                    <% for(let count = 0; count < UserList.length; count++) { %>
+                        <tr class="d-flex">
+                            <td class="text-center col-2"><%= UserList[count].fullname %></td>
+                            <td class="text-center col-2"><%= UserList[count].username %></td>
+                            <td class="text-center col-3"><%= UserList[count].dob %></td>
+                            <td class="col-3 text-center"><%= UserList[count].email %></td>
+    
+                            <td class="text-center col-1">
+                                <a href="/users/edit/<%= UserList[count]._id %>" class="btn btn-primary btn-sm">
+                                <i class="fas fa-pencil-alt"></i> Edit</a>
+                            </td>
+                            <td class="text-center col-1">
+                                <a href="/users/delete/<%= UserList[count]._id %>" class="btn btn-danger btn-sm">
+                                <i class="fas fa-trash-alt"></i> Delete</a>
+                            </td>
+                        </tr>
+                    <% } %>
+                </table>
+         
+        </div>
+
+</div>
+ </section>
+
+     <!--Footer-->
+     <% include ../partials/footer.ejs %>
+   </body>
+ </html>
+ 
+
+
+
+
+
+
+
+
+
+
+
